@@ -1,9 +1,9 @@
-//Write basic express boiler-plate code 
+// basic express boiler-plate code 
 //with express.json() middleware
 const express = require('express')
 const app = express();
 const { createTodo , updateTodo } = require("./types");
-const { parse } = require('marked');
+// const { parse } = require('marked');
 const {todo} = require("./db");
 const cors = require("cors");
 
@@ -19,7 +19,7 @@ app.post("/todo" , async function(req,res){
     })
     return ;
   }
- //put in mongodb if everthing goes well
+ //putting in moongodb
   await todo.create({
         title : createPayload.title,
         description : createPayload.description,
